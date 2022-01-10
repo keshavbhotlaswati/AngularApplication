@@ -1,0 +1,133 @@
+<ng-container *ngIf="variable==5">
+
+
+    <h1>Search for a Call-In Request</h1>
+
+    <p>
+        The CQ system allows you to search for a Call-In Request based on its status. The Create Request option allows you to search for new, existing, and active call-in requests. The Historical option allows you to search for a request in the historical data
+        and the Active option allows you to search for an active request. Call-in searches are based upon the status of the call-ins or the lifecycle of the call-ins. To access this screen, complete these steps.
+
+    </p>
+
+
+
+    <h2> Select one of the following tasks for instructions on how to complete that task: Searching for an Existing Request Searching for a New Request Searching for an Active Request Searching for an Historical Request
+
+    </h2>
+    <p>
+        Searching for an Existing Request To search for an existing call-in request that is new (not active yet), complete these steps: If necessary, click the Create Request link. The Create Call-In Part Request screen appears. Select a Request Status for the
+        type of request you want to find. NEW - A call-in was created by a supplier (or by Honda). SUBMITTED - The call-in is approved by the supplier and is submitted to Honda. APPROVED - Honda approves the call-in and completes the request. AWAIT-ACTIVE
+        – The call-in is waiting for the start of the next quarter in await status. As necessary to narrow your search results, complete the remaining fields in the search area of the screen. Short Part No. - The five-digit service part number. Destination
+        Name - The location where the dealer is shipping the part. Date Range- The date that the requests are due. Select either the Current Quarter or the Next Quarter to include only those requests that are due in the current or next quarters. Request
+        Number – The number of parts that have been requested. CPL Ref No. – The CPL tracking number that allows you to easily find a CPL that has been created in the system. This number is assigned by the CQ system. Select Feature(s) to Retrieve By to
+        narrow the search results. Click the Search button. The screen refreshes and the search results appear in the List of Requested Call-In Part List Items area at the bottom of the screen. Searching for a New Request To search for requests, complete
+        these steps: If necessary, click the Create Request link. The Create Call-In Part Request screen appears. From the Request Status list, select New. These are requests not yet submitted to Honda. As necessary to narrow your search results, complete
+        the remaining fields in the search area of the screen. Short Part No. – The five-digit service part number. Destination Name – The location where the dealer is shipping the part. Date Range – The date that the requests are due. Select either the
+        Current Quarter or the Next Quarter to include only those requests that are due in the current or next quarters. Request Number – The number of parts that have been requested. CPL Ref No. – The CPL tracking number that allows you to easily find
+        a CPL that has been created in the system. This number is assigned by the CQ system. Select Feature(s) to Retrieve By to narrow the search results. Click Search. The screen refreshes and the search results appear in the List of Requested Call-In
+        Part List Items area at the bottom of the screen. Searching for an Active Request To search for an active call-in, complete these steps: Click the Active link. The Active Call-In Parts List screen appears. As necessary to narrow your search results,
+        complete the remaining fields in the search area of the screen. Short Part No. – The five-digit service part number. Destination Name – The location where the dealer is shipping the part. Request Number – The number of parts that have been requested.
+        CPL Ref No. – The CPL tracking number that allows you to easily find a CPL that has been created in the system. This number is assigned by the CQ system. Select Feature(s) to Retrieve By to narrow the search results. Click Search. The screen refreshes
+        and the search results appear in the List of Active Call-In Part List Items area at the bottom of the screen. Searching for an Historical Request To perform a historical search call-in part list item requests, complete these steps: Click the Historical
+        link. The Historical Call-In Parts List screen appears. As necessary to narrow your search results, complete the remaining fields in the search area of the screen. Short Part No. – The five-digit service part number. Destination Name – The location
+        where the dealer is shipping the part. Expiration Date Range – The range of expiration dates to include in the search. Request Number – The number of parts that have been requested. CPL Ref No. – The CPL tracking number that allows you to easily
+        find a CPL that has been created in the system. This number is assigned by the CQ system. Select Feature(s) to Retrieve By to narrow the search results. Click Search. The screen refreshes and the search results appear in the List of Historical
+        Call-In Part List Items area at the bottom of the screen.
+
+
+
+    </p>
+    <button (click)="changevalue1(variable-1)">Previous</button>
+    <button (click)="changevalue1(variable+1)">Next</button>
+
+
+
+</ng-container>
+
+
+<ng-container *ngIf="variable==6">
+
+    <h1>Submit an Existing Request to Honda</h1>
+    <p>
+        To fully complete the call-in creation process, you need to submit the request to Honda. You should submit the request when it is created, but if you were unable to do so you can submit a request to Honda by re-opening the request from the Create Request
+        screen, then clicking the Submit to Honda button. The following instructions allow you to reopen the request, complete the data entry, and submit it to Honda to complete the Call-in process.
+    </p>
+
+
+
+
+    <h2> Submitting a Request to Honda</h2>
+    <p>
+        To submit a call-in part list item request to Honda, complete these steps:
+    </p>
+
+    <p>
+        Click the Call-in Parts List tab. The Create Call-In Part Request screen appears. From the Request Status list, select New. As necessary to narrow your search results, complete the remaining fields in the search area of the screen. Short Part No. – The
+        five-digit service part number. Destination Name – The location where the dealer is shipping the part. Date Range – The date that the requests are due. Select either the Current Quarter or the Next Quarter to include only those requests that are
+        due in the current or next quarters. Request Number – The number of parts that have been requested. CPL Ref No. – The CPL tracking number that allows you to easily find a CPL that has been created in the system. This number is assigned by the
+        CQ system. Select Feature(s) to Retrieve By to narrow the search results. Click the Search button. The screen refreshes and the search results appear in the List of Requested Call-In Part List Items area at the bottom of the screen. Select the
+        check box of each record that you want to submit. To update your call-in request before submittal, click the New link in the Request Status column. The Update Call-In Parts List Item Request screen appears. Update the necessary information, then
+        click Save. A verification message appears at the top of the screen. To return to the Search for Requested Call-In Part List Items screen (at any time), click Cancel. Click the Submit to Honda button. A verification dialog appears. Click OK to
+        submit to Honda. Click Cancel to return to the search results and make changes. If you click OK, a message dialog appears to inform you if the submission to Honda is successful.
+
+
+    </p>
+
+    <button (click)="changevalue1(variable-1)">Previous</button>
+    <button (click)="changevalue1(variable+1)">Next</button>
+
+</ng-container>
+
+<ng-container *ngIf="variable==7">
+
+
+    <h1>Copy Requests to Next Quarter</h1>
+    <p>
+        The Copy Requests to Next Quarter function allows you to streamline data entry by copying existing CPL's to the next quarter. You can copy as many requests as you need from the current quarter to the next quarter.
+    </p>
+
+
+
+
+    <h2> Copying a Request to the Next Quarter</h2>
+    <p>
+        You can copy requests to the next quarter using these steps: Perform a search for active or historical call-in part list request items. Select the check box of each record that you want to copy to the next quarter. Click the Copy To Next Quarter button.
+        A confirmation dialog appears. Verify your selections and click OK to continue with the copy or Cancel to change your selections. An Call-in item(s) have been successfully copied message appears.
+
+
+
+    </p>
+    <button (click)="changevalue1(variable-1)">Previous</button>
+    <button (click)="changevalue1(variable+1)">Next</button>
+
+
+</ng-container>
+
+<ng-container *ngIf="variable==8">
+
+    <h1>Export to Excel</h1>
+    <p>
+        The Export to Excel function allows you to create an Excel spreadsheet of the selected data. You can then use this spreadsheet to create the necessary reports for your organization by manipulating the data.
+    </p>
+
+
+
+
+    <h2>Exporting CQ data to an Excel Spreadsheet</h2>
+    <p>
+        To export the data to a spreadsheet, complete these steps:
+    </p>
+    <p>
+
+        Perform a call-in search, a current or historical TPL search, view current voucher summary, view warranty claims, or run one of the Warranty Claim reports. Select the records to export and click the Export button (or Export Details from the Voucher screen).
+        The File Download dialog appears. Note: You cannot select specific records when viewing a voucher summary or exporting warranty claim data. Click the Save button to download the data to your computer. The Save As dialog appears. Navigate to the
+        location on your computer where you want to save the Excel file and type a name in the File name field (or accept the name provided), then click the Save button. The file is now saved and can be opened at anytime with Microsoft Excel. OR You can
+        click the Open button on the File Download dialog to open Microsoft Excel and display the data.
+
+
+    </p>
+
+    <button (click)="changevalue1(variable-1)">Previous</button>
+
+
+</ng-container>
