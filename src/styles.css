@@ -1,3 +1,400 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
+BODY {
+    font-family: Arial;
+    background-color: #ffffff;
+}
+
+H1 {
+    margin-bottom: 5.5pt;
+    margin-top: 9pt;
+    color: #990000;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 13pt;
+    font-family: Arial, sans-serif;
+}
+
+LI.kadov-H1 {
+    color: #990000;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 10pt;
+    font-family: Verdana, sans-serif;
+}
+
+H2 {
+    font-weight: bold;
+    margin-bottom: 6pt;
+    color: #990000;
+    margin-top: 10.5pt;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+}
+
+LI.kadov-H2 {
+    font-weight: bold;
+    color: #990000;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+H3 {
+    font-weight: bold;
+    margin-bottom: 6pt;
+    margin-top: 18pt;
+    color: #990000;
+    font-size: 9pt;
+    font-family: Arial;
+}
+
+LI.kadov-H3 {
+    font-weight: bold;
+    color: #990000;
+    font-size: 8.5pt;
+}
+
+H4 {
+    font-weight: bold;
+    font-size: 9pt;
+    font-family: Arial;
+}
+
+LI.kadov-H4 {
+    font-weight: bold;
+    font-size: 8.5pt;
+}
+
+P {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-top: 9pt;
+    margin-bottom: 6pt;
+}
+
+LI.kadov-P {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+A.expandspot {
+    font-size: 8.5pt;
+    font-weight: normal;
+    font-style: normal;
+    color: #800000;
+    text-decoration: none none none none none none none none none none none none;
+}
+
+SPAN.expandtext {
+    font-weight: normal;
+    font-style: normal;
+    color: #0000ff;
+    font-size: 8.5pt;
+}
+
+.PopupOver {
+    font-family: 'Arial';
+    color: white;
+    background: navy;
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.PopupNotOver {
+    font-family: 'Arial';
+    color: black;
+    background: #c0c0c0;
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+A.dropspot {
+    font-family: Verdana, sans-serif;
+    color: #0000ff;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 8.5pt;
+    text-decoration: none none none none none none none none none none none none;
+}
+
+A.glossterm {
+    color: #800000;
+    font-style: italic;
+    font-size: 8.5pt;
+    font-family: Verdana, sans-serif;
+    text-decoration: none none none none none none none none none none none none;
+}
+
+SPAN.glosstext {
+    font-style: italic;
+    font-weight: normal;
+    color: #0000ff;
+    font-size: 8.5pt;
+    font-family: Verdana, sans-serif;
+}
+
+OL {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Arial;
+}
+
+UL {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Arial;
+}
+
+A:hover {
+    color: #0000ff;
+    font-size: 8pt;
+    font-family: Verdana, sans-serif;
+    text-decoration: underline underline;
+}
+
+A:visited {
+    color: #0000ff;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+A:active {
+    color: #0000ff;
+    font-size: 8pt;
+    font-family: Verdana, sans-serif;
+}
+
+P.ExampleText {
+    margin-bottom: 10.5pt;
+    background-color: #f2f4d0;
+    margin-top: 4.5pt;
+    text-indent: 0in;
+    margin-left: 48pt;
+    font-size: 8.5pt;
+    margin-right: 18pt;
+}
+
+LI.kadov-P-CExampleText {
+    text-indent: 0in;
+    font-size: 8.5pt;
+}
+
+LI.kadov-P-CNote {
+    text-indent: 0in;
+    font-size: 8.5pt;
+}
+
+P.BodyTextIndent {
+    margin-top: 1pt;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-bottom: 10.5pt;
+    margin-left: 41px;
+}
+
+LI.kadov-P-CBodyTextIndent {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+p.Graphic {
+    margin-top: 1pt;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-bottom: 10.5pt;
+    margin-left: 40px;
+}
+
+LI.kadov-p-CGraphic {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+p.ListBullet2 {
+    margin-left: 26px;
+    list-style: circle;
+    margin-bottom: 6pt;
+}
+
+LI.kadov-p-CListBullet2 {
+    list-style: circle;
+}
+
+p.ListNumber {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    list-style: decimal;
+    margin-bottom: 6pt;
+    margin-top: 10.5pt;
+}
+
+LI.kadov-p-CListNumber {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    list-style: decimal;
+}
+
+p.ListNumber2 {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    list-style: lower-alpha;
+    margin-bottom: 6pt;
+    margin-top: 6pt;
+    margin-left: 38pt;
+}
+
+LI.kadov-p-CListNumber2 {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    list-style: lower-alpha;
+}
+
+p.ListBullet {
+    list-style: disc;
+    margin-bottom: 6pt;
+}
+
+LI.kadov-p-CListBullet {
+    list-style: disc;
+}
+
+p.TableHead {
+    margin-top: 1pt;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-bottom: 10.5pt;
+    margin-left: 1pt;
+    margin-right: 1pt;
+    font-style: normal;
+    font-weight: bold;
+}
+
+LI.kadov-p-CTableHead {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    font-style: normal;
+    font-weight: bold;
+}
+
+p.BodyText {
+    margin-top: 1pt;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-bottom: 10.5pt;
+}
+
+LI.kadov-p-CBodyText {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+p.TableText {
+    margin-top: 1pt;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-bottom: 10.5pt;
+}
+
+LI.kadov-p-CTableText {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+p.TableImage {
+    margin-top: 1pt;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-bottom: 10.5pt;
+}
+
+LI.kadov-p-CTableImage {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+p.Links {
+    margin-top: 1pt;
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+    margin-bottom: 6pt;
+}
+
+LI.kadov-p-CLinks {
+    font-family: Verdana, sans-serif;
+    font-size: 8.5pt;
+}
+
+P.Next {
+    color: #b00000;
+    text-decoration: underline underline;
+}
+
+LI.kadov-P-CNext {
+    color: #b00000;
+    text-decoration: underline underline;
+}
+
+A:link {
+    font-size: 8.5pt;
+    font-family: Verdana, sans-serif;
+}
+
+DIV.droptext {
+    font-size: 8.5pt;
+    font-family: Verdana, sans-serif;
+}
+
+P.ExampleText2 {
+    margin-left: 48pt;
+    margin-top: 4.5pt;
+    margin-right: 18pt;
+    background-color: #f2f4d0;
+}
+
+
+/* LI.kadov-P-CExampleText2 {}
+
+LI.kadov-P-CNote2 {} */
+
+P.Tip {
+    background-color: #f2f4d0;
+    margin-left: 18pt;
+    margin-right: 18pt;
+    margin-top: 4.5pt;
+}
+
+
+/* LI.kadov-P-CTip {} */
+
+P.NumberListStart {
+    margin-top: 1pt;
+    margin-bottom: 1pt;
+    font-size: 4pt;
+    font-family: "Courier New", monospace;
+}
+
+LI.kadov-P-CNumberListStart {
+    font-size: 4pt;
+    font-family: "Courier New", monospace;
+}
+
+ol ol {
+    margin-top: 9px;
+}
+
+ol ul {
+    margin-top: 9px;
+}
+
+ul ul {
+    margin-top: 9px;
+}
+
+ul ol {
+    margin-top: 9px;
+}

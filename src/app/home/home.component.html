@@ -1,82 +1,114 @@
-<ng-container *ngIf="a==1">
-    <p>
-        Warranty Claim data is the foundation of the CQ system. Using this process, suppliers or Honda can create a call-in for impact parts —there is a defined call-in lifecycle. Suppliers create the call-in since they are responsible for performing trend analysis
-        on the data. However, a call-in can also be created by Honda if a high impact part is identified and is needing attention. Aggregate claim data is loaded into the CQ system on a daily basis so Honda Market Quality and our suppliers can analyze
-        the claim data. When parts are received from the dealers, the part is now on the Transfer Part List (TPL) and Market Quality issues the parts to our suppliers on a weekly basis. These parts are placed on the TPL to track each part to a particular
-        warranty claim. Parts are tracked with the dealer number and the claim number. Suppliers have 28 days to analyze the part and submit their results to Honda. Suppliers perform analysis on warranty returned parts and provide the details of their
-        analysis to the TPL. If the issue is with the supplier part, suppliers then rectify the part problem and provide a countermeasure and resolution to the problem. Honda assigns financial responsibility for the problems as a percentage of claims
-        that are made against the number of vehicles that are sold, based on a population of claims: [(The number of claims) / (The number of unit sales)] X 100=C UM%
+<ng-container *ngIf="variable1==1">
+
+
+
+    <h1>Challenge Quality Process</h1>
+    <p>Warranty Claim data is the foundation of the CQ system. Using this process, suppliers or Honda can create a call-in for <a href="#" (click)="toggle1()">impact parts</a>
+
+        <ng-container *ngIf="show1">
+            <span class="expandtext" style="display: show1;">(These are the parts that are the parts that will be handled under warranty.)<span style="background-color:#ffff00; color:#ff0000;"><font color="red">&lt;&lt;need better definition&gt;&gt;</font></span></span>
+
+        </ng-container>
+
+        —there is a defined <a class="dropspot" href="#" (click)="toggle2()" style="position:relative;">call-in lifecycle</a> Suppliers create the call-in since they are responsible for performing trend analysis on the data. However, a call-in can also
+        be created by Honda if a high impact part is identified and is needing attention.
     </p>
+    <div *ngIf="show2" class="droptext" style="display: show;">
+        <h2>Lifecycle of a Call-In</h2>
+        <p>The available stages of a call-in lifecycle are:</p>
+        <ul>
+            <li class="kadov-p-CListBullet">
+                <p class="ListBullet"><span style="font-weight:bold;"><b>New -</b></span> A call-in was created by a supplier (or by Honda) and saved.</p>
+            </li>
+            <li class="kadov-p-CListBullet">
+                <p class="ListBullet"><span style="font-weight:bold;"><b>Submitted -</b></span> The call-in is approved by the supplier and is submitted to Honda.</p>
+            </li>
+            <li class="kadov-p-CListBullet">
+                <p class="ListBullet"><span style="font-weight:bold;"><b>Approved -</b></span> Honda approves the call-in and completes the request.</p>
+            </li>
+            <li class="kadov-p-CListBullet">
+                <p class="ListBullet"><span style="font-weight:bold;"><b>Await Active -</b></span> The call-in is waiting for the start of the next quarter in await status.</p>
+            </li>
+            <li class="kadov-p-CListBullet">
+                <p class="ListBullet"><span style="font-weight:bold;"><b>Active -</b></span> The start of a new quarter has passed, the call-in is active and participating in the process, or if a new call-in was added to the current quarter.</p>
+            </li>
+            <li class="kadov-p-CListBullet">
+                <p class="ListBullet"><span style="font-weight:bold;"><b>Historical -</b></span> <span>The quarter in which this call-in was created has ended.</span></p>
+            </li>
+        </ul>
+        <p>Each call-in part list item record is flagged with a status based on this lifecycle. For example, when you perform an Active search, you are searching for call-in items that are currently participating in the process (the current calendar quarter).
+            When you perform a Historical search, you are searching for call-in items that have been called-in for a previous quarter.</p>
+    </div>
+    <p>Aggregate claim data is loaded into the CQ system on a daily basis so Honda Market Quality and our suppliers can analyze the claim data.</p>
+    <p>When parts are received from the dealers, the part is now on the Transfer Part List (TPL) and Market Quality issues the parts to our suppliers on a weekly basis. These parts are placed on the TPL to track each part to a particular warranty claim.
+        Parts are tracked with the dealer number and the claim number.</p>
+    <p>Suppliers have 28 days to analyze the part and submit their results to Honda. Suppliers perform analysis on warranty returned parts and provide the details of their analysis to the TPL. If the issue is with the supplier part, suppliers then rectify
+        the part problem and provide a countermeasure and resolution to the problem.</p>
+    <p>Honda assigns financial responsibility for the problems as a percentage of claims that are made against the number of vehicles that are sold, based on a population of claims:</p>
+    <p class="whs1"><span style="font-weight:bold;"><b>[(The number of claims) / (The number of unit sales)] X 100 = CUM%</b></span></p>
+    <p class="whs2"><a class="dropspot" href="#" (click)="toggle3()" style="position:relative;">Click here to view a summary of the CQ process.</a>
+
+    </p>
+    <div class="droptext" *ngIf="show3" style="display: show3;">
+        <p class="Graphic"><img src="../../assets/cqp_prcs_flwchrt (1).gif" width="407px" height="531px" border="0" class="img_whs3" alt=""></p>
+    </div>
+    <!-- <p class="whs4">&nbsp;</p>
+    <p class="whs5">
+        <a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;} if (parseInt(navigator.appVersion) >=2 &amp;&amp; typeof(PopupMenu_Invoke) == 'function') PopupMenu_Invoke(e,'','Printing this User Manual','cqp_prtmanual.htm','Using the System','cqp023_home_page_overview.htm','Welcome','cqp_welcome.htm');return false;"
+            title=""><img src="../images/0_rltdtopics_btn.jpg" border="0" height="24" width="99" alt=""></a>
+    </p>
+    <div id="footer" class="whs6">
+        <p>&nbsp;</p>
+    </div> -->
 
 
+    <div id="PopupMenu" style="position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;"></div>
 
-    <button (click)="changenextvalue(a+1)">Next</button>
+    <button (click)="changenextvalue(variable1+1)">Next</button>
 </ng-container>
 
 
-<ng-container *ngIf="a==2">
+<ng-container *ngIf="variable1==2">
+
+
+
+
     <h1>Home Page Overview</h1>
-    <p>
-        When you log in to the CQ system, the Home Page appears. The CQ Home page is the main screen for suppliers in the CQ system. From the Home Page you can review your alerts list. Review the Alerts List The Alerts List displays at the bottom of the screen.
-        The records display in one of two main severity types: Action - An action item informs you of items that require an action from you Information - An information item indicates an action taken by Honda Managing Your Alerts List You can manage your
-        alerts list using the check box beside each alert item. To move an alert to the Done list, select the check box in front of each alert that is complete and click the Done button. The screen refreshes and the alert item moves to the bottom of the
-        page.
-    </p>
+    <p id="p2">When you log in to the CQ system, the <a class="dropspot" (click)="toggle4()" href="#" style="position:relative;">Home Page</a> appears. The CQ Home page is the main screen for suppliers in the CQ system. From the <span style="font-weight:bold;"><b>Home Page</b></span>        you can review your alerts list.</p>
+    <div class="droptext" *ngIf="show4" style=" display: show4; ">
+        <p class="Graphic ">
+            <img src="../../assets/cqp_hm_nbxvw.gif " x-maintain-ratio="TRUE " style="border-left-style:Solid;border-left-width:1px;border-right-style:Solid;border-right-width:1px;border-top-style:Solid;border-top-width:1px;border-bottom-style:Solid;border-bottom-width:1px; "
+                width="588px " height="446px " border="1 " class="img_whs1 "></p>
+        <p class="graphic ">&nbsp;</p>
+    </div>
+    <h2 id="h21 ">Review the Alerts List</h2>
+    <p>The <span style="font-weight:bold; "><b>Alerts List</b></span> displays at the bottom of the screen. The records display in one of two main severity types:</p>
+    <ul>
+        <li class="kadov-p-CListBullet ">
+            <p class="ListBullet "><span style="font-weight:bold; "><b>Action -</b></span> An action item informs you of items that require an action from you</p>
+        </li>
+        <li class="kadov-p-CListBullet ">
+            <p class="ListBullet "><span style="font-weight:bold; "><b>Information -</b></span> An information item indicates an action taken by Honda</p>
+        </li>
+    </ul>
+    <h2>Managing Your Alerts List</h2>
+    <p>You can manage your alerts list using the check box beside each alert item. To move an alert to the Done list, select the check box in front of each alert that is complete and click the <span style="font-weight:bold; "><b>Done</b></span> button. The
+        screen refreshes and the alert item moves to the bottom of the page.</p>
+    <p id="p10 " class="whs2 ">&nbsp;</p>
+    <!-- <p id="p10 " class="whs2 ">
+        <a href="javascript:void(0); " onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;} if (parseInt(navigator.appVersion) >=2 &amp;&amp; typeof(PopupMenu_Invoke) == 'function') PopupMenu_Invoke(e,'','Before You Begin','cqp_before.htm','Call-in Part List','cqp009_manage_callins.htm','Overview of the Challenge Quality Process','cqp_process.htm','Using
+        the System','using_the_system.htm');return false;" title="">
+        <img src="../images/0_rltdtopics_btn.jpg" border="0" height="24" width="99" alt=""></a>
+        </p> -->
+    <div id="footer" class="whs3">
+        <p>&nbsp;</p>
+    </div>
+
+    <div id="PopupMenu" style="position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;"></div>
 
 
 
-    <button (click)="changenextvalue(a-1)">Previous</button>
-    <button (click)="changenextvalue(a+1)">Next</button>
-
-</ng-container>
-
-
-<ng-container *ngIf="a==3">
-    <h1>Call-in Part List</h1>
-
-    <h2>Process Overview</h2>
-
-    <p>
-        A suppliers workflow begins with the call-in. The call-in establishes the flow of parts that is supported through analysis of warranty claim data. The primary responsibility of creating a call-in rests with the supplier. When there is a gap in the call-in
-        process from what the supplier has requested, Honda has the ability to create a call-in. Honda may also delete call-in requests for low impact parts. Part impact is determined through data analysis. Suppliers are required to submit the next quarter's
-        call-in requests two weeks prior to the end of the current quarter. The part is entered as a call-in request. Honda enters the request number, which begins with the prefix 2CQ, BCQ, or ZWR. The call-in waits for the part to arrive from the dealer.
-        The part is sent to the supplier for analysis and enters the Transfer Parts List (TPL) phase. Parts are shipped to suppliers from Honda on a weekly basis. Every week each supplier starts with a clean shelf. Lifecycle of a Call-In The available
-        stages of a call-in lifecycle are: New - A call-in was created by a supplier (or by Honda). Submitted - The call-in is approved by the supplier and is submitted to Honda. Approved - Honda approves the call-in and completes the request. Await Active
-        - The call-in is waiting for the start of the next quarter in await status. Active - The start of a new quarter has passed, the call-in is active and participating in the process, or if a new call-in was added to the current quarter. Historical
-        - The quarter in which this call-in was created has ended. Each call-in part list item record is flagged with a status based on this lifecycle. For example, when you perform an Active search, you are searching for call-in items that are currently
-        participating in the process (the current calendar quarter). When you perform a Historical search, you are searching for call-in items that have been called-in for a previous quarter. Managing Your Call-in Part List To manage your call-in part
-        list, click the Call-in Part List tab. The call-in part list screen appears. Three options are available: Create Request (Default) – Allows you to create and search for new requests Active – Allows you to view active requests Historical – Allows
-        you to view historical call-in requests From these sub-tabs you can create, search, and submit call-in requests. From the Call-In Part List screen, you can perform these tasks:
-
-    </p>
-
-
-    <button (click)="changenextvalue(a-1)">Previous</button>
-    <button (click)="changenextvalue(a+1)">Next</button>
-
-</ng-container>
-
-
-<ng-container *ngIf="a==4">
-    <h1>Create a Call-In Request </h1>
-    <p>
-        The Create Request screen allows you to create a new request, search for a request, or submit a request. For further information about Call-In Part Lists, refer to Call-in Part List. To access this screen, complete this step. Select one of the following
-        tasks for instructions on how to complete that task: Creating a new request Searching for an existing call-in request Submitting a call-in request to Honda Creating a New Request To create a call-in part list item request, complete these steps:
-        If necessary, click the Create Request link. The Create Call-In Part Request screen appears. Click the Create button. The Create Call-In Part List Item Request screen appears. Select the 5-digit Short Part No. (service part number). Select the
-        Model Year and Model Name. Select the Factory Name of the location where the vehicle was built. Select the Destination Name of the location where the part is being shipped to from the dealer. Select the Date Requested to include the request in
-        either the Current Quarter or the Next Quarter. Enter the Requested Quantity of the parts to be called in. Enter the Model Description for where the part is used. Note: This text field can be used to provide more detailed description of the VIN.
-        Optional: In the IPP Tag # / Ship Date / MIR No.: list, select the IPP tag number, the shipment date, the MIR number, and/or the QIS number. Optional: Select the Available Features for the part. The Feature Values appear, you can select and deselect
-        features by selecting the feature in either the Feature Values or the Selected Feature Values lists and then clicking the move (arrow) buttons between the lists. Click the Save button. A confirmation message of Call-in item has been created successfully
-        displays at the top of the Create Request screen. If the request is complete, click the Submit to Honda button. A Call-in items have been successfully submitted to Honda message displays.
-
-    </p>
-
-
-
-    <button (click)="changenextvalue(a-1)">Previous</button>
-    <button (click)="changenextvalue(a+1)">Next</button>
-
-
-
+    <button (click)="changenextvalue(variable1-1)">Previous</button>
+    <button (click)="changenextvalue(variable1+1)">Next</button>
 
 </ng-container>
